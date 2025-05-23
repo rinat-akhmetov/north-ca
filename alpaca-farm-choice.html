@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Выбираем Альпака‑Ферму на 18 мая</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6f6f6;
+      --card: #ffffff;
+      --primary: #ff6f61;
+      --secondary: #3c91e6;
+      --text: #222222;
+      --weather-bg: #f2f2f2;
+    }
+  
+    * {
+      box-sizing: border-box;
+    }
+  
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+  
+    header {
+      padding: 2rem 1rem 1rem;
+      text-align: center;
+    }
+  
+    header h1 {
+      margin: 0 0 .5rem;
+      font-size: clamp(1.4rem, 2.5vw, 2.1rem);
+    }
+  
+    header p {
+      margin: 0;
+      opacity: .8;
+    }
+  
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+  
+    .card {
+      background: var(--card);
+      border-radius: 1.25rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, .08);
+      padding: 1.25rem 1rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+  
+    .card-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      margin: -1.25rem -1rem 1rem;
+      border-radius: 1.25rem 1.25rem 0 0;
+    }
+  
+    .badge {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: var(--primary);
+      color: #fff;
+      padding: .25rem .6rem;
+      border-radius: .5rem;
+      font-size: .75rem;
+      font-weight: 600;
+      z-index: 1;
+    }
+  
+    .badge.secondary {
+      background: var(--secondary);
+    }
+  
+    .card h2 {
+      margin: 0 0 .4rem;
+      font-size: 1.25rem;
+    }
+  
+    .card p {
+      margin: .25rem 0;
+      line-height: 1.4;
+    }
+  
+    .weather {
+      margin: .75rem 0 .85rem;
+      font-size: .9rem;
+      background: var(--weather-bg);
+      border-radius: .5rem;
+      padding: .5rem .75rem;
+    }
+  
+    a.btn {
+      margin-top: auto;
+      align-self: flex-start;
+      background: var(--primary);
+      color: #fff;
+      text-decoration: none;
+      padding: .55rem 1rem;
+      border-radius: .75rem;
+      font-weight: 600;
+      transition: background .2s ease;
+    }
+  
+    a.btn:hover {
+      background: #ff5a4e;
+    }
+  
+    .explain {
+      max-width: 900px;
+      margin: 1rem auto 2.5rem;
+      padding: 1.5rem 1.5rem 2rem;
+      background: var(--card);
+      border-radius: 1rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, .05);
+    }
+  
+    .explain h3 {
+      margin: 1.2rem 0 .6rem;
+    }
+  
+    .explain h3:first-child {
+      margin-top: 0;
+    }
+  
+    .explain ol {
+      padding-left: 1.25rem;
+      margin: 0 0 1rem;
+    }
+  
+    .explain li {
+      margin-bottom: .5rem;
+    }
+  
+    .cost {
+      font-weight: 600;
+    }
+  
+    footer {
+      text-align: center;
+      padding: 1.5rem 1rem 2.5rem;
+      font-size: .9rem;
+      opacity: .7;
+    }
+  
+    .night {
+      --bg: #121212;
+      --card: #1e1e1e;
+      --primary: #bb86fc;
+      --secondary: #03dac6;
+      --text: #e0e0e0;
+      --weather-bg: #2a2a2a;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Куда едем гладить альпак 18 мая <span style="white-space:nowrap">после&nbsp;12 часов?</span></h1>
+    <p>Сравните варианты и выберите лучший для семейного воскресного приключения.</p>
+  </header>
+
+  <main class="container">
+    <!-- Cold Springs → Лучший по погоде и расстоянию -->
+    <article class="card">
+      <span class="badge">Лучший выбор</span>
+      <img src="img/alpaca/Cold Springs Alpacas.webp"
+        alt="Альпака на Cold Springs Alpacas" class="card-img">
+      <h2>Cold Springs Alpacas</h2>
+      <p>Приват‑тур (до&nbsp;6&nbsp;гостей) и ламповый магазин пледов из собственной шерсти.</p>
+      <p><strong>Дистанция:</strong> ≈&nbsp;45&nbsp;минут от Торонто.</p>
+      <div class="weather"><strong>Погода 18 мая:</strong><br />Облачно, ветренo; днём&nbsp;≈&nbsp;17 °C, ночью&nbsp;5 °C.
+      </div>
+      <a class="btn" href="https://www.google.com/maps/dir/?api=1&destination=Cold+Springs+Alpacas+Campbellcroft+ON"
+        target="_blank" rel="noopener">Маршрут в Google Maps →</a>
+    </article>
+  
+    <!-- Haute Goat -->
+    <article class="card">
+      <span class="badge secondary">Фуд‑трип</span>
+      <img src="img/alpaca/Haute Goat.webp"
+        alt="Альпаки и козы на Haute Goat Farm" class="card-img">
+      <h2>Haute Goat Farm</h2>
+      <p>Альпака‑прогулки, карликовые козы, мини‑пиги + кафе «Screaming Goat».</p>
+      <p><strong>Дистанция:</strong> ≈&nbsp;1&nbsp;ч&nbsp;10&nbsp;мин.</p>
+      <div class="weather"><strong>Погода 18 мая:</strong><br />Тучно, утренний ветер; днём&nbsp;≈&nbsp;15 °C,
+        ночь&nbsp;6 °C.</div>
+      <a class="btn" href="https://www.google.com/maps/dir/?api=1&destination=Haute+Goat+Farm+Port+Hope+ON"
+        target="_blank" rel="noopener">Маршрут в Google Maps →</a>
+    </article>
+  
+    <!-- S.A.M.Y.'s Alpaca Farm -->
+    <article class="card">
+      <span class="badge secondary">Топ шоу‑ивент</span>
+      <img src="img/alpaca/S.A.M.Y.’s Alpaca Farm.webp"
+        alt="Стрижка альпаки на S.A.M.Y.'s Alpaca Farm" class="card-img">
+      <h2>S.A.M.Y.’s Alpaca Farm</h2>
+      <p>Раз в год «Alpaca Spa Day»: стрижка стада плюс пикник среди ушастых.</p>
+      <p><strong>Дистанция:</strong> ≈&nbsp;2 ч&nbsp;25 мин.</p>
+      <div class="weather"><strong>Погода 18 мая:</strong><br />Облачно и ветрено; днём&nbsp;≈&nbsp;15 °C, ночь&nbsp;6 °C.
+      </div>
+      <a class="btn" href="https://www.google.com/maps/dir/?api=1&destination=S.A.M.Y.%27s+Alpaca+Farm+Kerwood+ON"
+        target="_blank" rel="noopener">Маршрут в Google Maps →</a>
+    </article>
+  
+    <!-- Harmony Meadows -->
+    <article class="card">
+      <img src="img/alpaca/Harmony Meadows Alpaca.webp"
+        alt="Альпаки на Harmony Meadows" class="card-img">
+      <h2>Harmony Meadows Alpaca</h2>
+      <p>Формат «Feed & Photo» + тропы у озера Belwood для лёгкого хайка.</p>
+      <p><strong>Дистанция:</strong> ≈&nbsp;1 ч 15 мин.</p>
+      <div class="weather"><strong>Погода 18 мая:</strong><br />Облачно, ветрено; днём&nbsp;≈&nbsp;14 °C, ночь&nbsp;4 °C.
+      </div>
+      <a class="btn" href="https://www.google.com/maps/dir/?api=1&destination=Harmony+Meadows+Alpaca+Belwood+ON"
+        target="_blank" rel="noopener">Маршрут в Google Maps →</a>
+    </article>
+  
+    <!-- Brae Ridge -->
+    <article class="card">
+      <img src="img/alpaca/Brae Ridge Farm & Sanctuary.webp"
+        alt="Альпака с сердечком на Brae Ridge" class="card-img">
+      <h2>Brae Ridge Farm & Sanctuary</h2>
+      <p>Альпаки, мини‑лошадки и утки‑аристократы + романтический пикник‑сет.</p>
+      <p><strong>Дистанция:</strong> ≈&nbsp;1 час.</p>
+      <div class="weather"><strong>Погода 18 мая:</strong><br />Облачно, бриз; днём&nbsp;≈&nbsp;16 °C, ночь&nbsp;5 °C.
+      </div>
+      <a class="btn" href="https://www.google.com/maps/dir/?api=1&destination=Brae+Ridge+Farm+Puslinch+ON" target="_blank"
+        rel="noopener">Маршрут в Google Maps →</a>
+    </article>
+  </main>
+
+  <section class="explain">
+    <h3>Почему Cold Springs — лучший выбор?</h3>
+    <ol>
+      <li><strong>Самая тёплая погода</strong> среди всех вариантов (+17 °C днём).</li>
+      <li><strong>Короткая дорога</strong>: всего 45 минут, больше времени с альпаками.</li>
+      <li><strong>Камерная атмосфера</strong>: не более 6 гостей в слоте — никаких очередей на селфи.</li>
+      <li><strong>Быстрая запись</strong>: свободное окно 12:00–13:00 подтверждается хозяевами сразу.</li>
+      <li><strong>Магазин пледов</strong>: уютный сувенир прямо с фермы.</li>
+    </ol>
+    <p class="cost">Стоимость поездки на троих: 125 $ / 3 человека = <strong>41 $</strong> с человека.</p>
+
+    <h3>Почему Haute Goat — «Фуд‑трип»?</h3>
+    <ol>
+      <li><strong>Кафе на территории</strong>: горячие блюда, козий сыр и сидр — можно полноценно пообедать, не ищя ресторан отдельно.</li>
+      <li><strong>Фермерские продукты</strong>: магазинчик с джемами, мёдом и сыром для вкусных сувениров.</li>
+      <li><strong>Расширенный контакт</strong>: кроме альпак, мини‑козы и мини‑пиги дают больше ремесленной милоты.</li>
+      <li><strong>Прогулка с альпакой</strong>: формат Alpaca Walks по расписанию — редкий опыт «на поводке».</li>
+      <li><strong>Семейная инфраструктура</strong>: столики, туалеты, парковка — удобно, если хотим долго зависнуть.</li>
+    </ol>
+
+    <h3>Почему S.A.M.Y.’s — «Топ шоу‑ивент»?</h3>
+    <ol>
+      <li><strong>Уникальное событие года</strong>: стрижка всего стада («Alpaca Spa Day») бывает один раз, создаёт эффект вау.</li>
+      <li><strong>Демонстрации мастерства</strong>: можно увидеть работу грумеров и узнать, как превращают шерсть в пряжу.</li>
+      <li><strong>Пикник среди стада</strong>: разрешено приносить еду и устроить ланч прямо на поле во время тусовки.</li>
+      <li><strong>Большое стадо</strong>: десятки альпак сразу — фотоконтент и детское восторжение обеспечены.</li>
+      <li><strong>Бесплатный вход</strong> на событие (донейшн приветствуется) — бюджетно для большой компании.</li>
+    </ol>
+  </section>
+
+<footer>Данные о погоде обновлены 17 мая 2025 г. в 20:00 EDT. Бейджи «Лучший выбор», «Топ шоу‑ивент» и «Фуд‑трип» помогают быстро выбрать по личным приоритетам.</footer>
+
+  <script>
+    (function() {
+      const hour = new Date().getHours();
+      if (hour >= 18 || hour < 6) {
+        document.body.classList.add('night');
+      }
+    })();
+  </script>
+</body>
+</html>
