@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glow-Art Birthday Plan 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --glow-pink: rgba(236, 72, 153, 0.9);
+        --glow-green: rgba(74, 222, 128, 0.9);
+        --glow-blue: rgba(99, 102, 241, 0.9);
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #000;
+        color: #e5e7eb;
+        overflow-x: hidden;
+      }
+
+      .parallax-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-image: url("https://images.unsplash.com/photo-1579546929518-9e396f3cc809?q=80&w=2070&auto=format&fit=crop");
+        background-size: cover;
+        background-position: center;
+        z-index: -2;
+        filter: blur(8px) brightness(0.4);
+        transform: scale(1.1);
+      }
+
+      .glass-card {
+        background: rgba(17, 24, 39, 0.6);
+        backdrop-filter: blur(12px) saturate(150%);
+        -webkit-backdrop-filter: blur(12px) saturate(150%);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .glass-card:hover {
+        transform: translateY(-5px) scale(1.01);
+        box-shadow: 0 0 30px rgba(99, 102, 241, 0.2);
+      }
+
+      h2 {
+        font-weight: 900;
+        font-size: 2.25rem; /* text-4xl */
+        letter-spacing: -0.05em;
+        color: #fff;
+      }
+
+      .glow-divider {
+        height: 3px;
+        width: 100px;
+        margin: 0.5rem 0 1.5rem;
+        background: linear-gradient(90deg, var(--glow-pink), var(--glow-green));
+        border-radius: 3px;
+        box-shadow: 0 0 15px var(--glow-pink), 0 0 15px var(--glow-green);
+      }
+
+      .scroll-section {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        margin-bottom: 3rem;
+      }
+
+      .scroll-section.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .hero {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 1rem;
+        position: relative;
+      }
+
+      .hero h1 {
+        font-size: clamp(3rem, 10vw, 6rem);
+        font-weight: 900;
+        color: white;
+        letter-spacing: -0.05em;
+      }
+
+      .hero-title-glow {
+        text-shadow: 0 0 10px var(--glow-pink), 0 0 20px var(--glow-pink),
+          0 0 40px var(--glow-green), 0 0 60px var(--glow-green);
+      }
+
+      .hero-subtitle {
+        font-size: clamp(1.2rem, 3vw, 1.7rem);
+        color: #d1d5db;
+        margin-top: 1rem;
+        max-width: 600px;
+      }
+
+      .list-item-glow::before {
+        content: "✦";
+        color: var(--glow-green);
+        margin-right: 0.75rem;
+        font-size: 1.2em;
+        text-shadow: 0 0 8px var(--glow-green);
+      }
+    </style>
+  </head>
+  <body class="antialiased">
+    <div class="parallax-bg" id="parallax-bg"></div>
+
+    <header class="hero" id="hero-section">
+      <h1 id="hero-title">
+        <span class="hero-title-glow">Glow-Art</span> Birthday
+      </h1>
+      <p class="hero-subtitle">
+        Футуристичный план арт-вечеринки в неоновом стиле. Погрузитесь в мир
+        света, цвета и музыки.
+      </p>
+    </header>
+
+    <main class="max-w-5xl mx-auto p-4 sm:p-6 lg:p-8">
+      <section id="goal" class="scroll-section glass-card p-8 rounded-2xl">
+        <h2>1. Цель и концепция</h2>
+        <div class="glow-divider"></div>
+        <p class="text-lg leading-relaxed">
+          Создать камерное (до 30 гостей) арт-мероприятие в формате «неоновый
+          клуб + интерактивная мастерская», совмещающее живопись
+          ультрафиолетовыми красками, музыку и дегустацию вина.
+        </p>
+      </section>
+
+      <section id="venue" class="scroll-section glass-card p-8 rounded-2xl">
+        <h2>2. Площадка</h2>
+        <div class="glow-divider"></div>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="font-bold text-xl text-white mb-4">
+              Приоритетные варианты
+            </h3>
+            <div class="space-y-6">
+              <div class="border-l-4 border-pink-500 pl-4">
+                <h4 class="font-semibold text-lg text-pink-300">
+                  Studio Cozy (Toronto)
+                </h4>
+                <p class="text-gray-300">
+                  Плюсы: Белые стены, BYO. Минусы: Аренда мебели. Стоимость: ≈
+                  C$ 700 / 5 ч
+                </p>
+              </div>
+              <div class="border-l-4 border-green-400 pl-4">
+                <h4 class="font-semibold text-lg text-green-300">
+                  San Sheng Gallery (Markham)
+                </h4>
+                <p class="text-gray-300">
+                  Плюсы: Галерейные рейлы. Минусы: 30 мин от центра. Стоимость:
+                  ≈ C$ 960 / день
+                </p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3 class="font-bold text-xl text-white mb-4">Требования</h3>
+            <ul class="space-y-2 text-gray-300">
+              <li class="flex items-start list-item-glow">
+                <span>Потолок ≥ 3 м, белые стены.</span>
+              </li>
+              <li class="flex items-start list-item-glow">
+                <span>2 независимые линии по 15 A.</span>
+              </li>
+              <li class="flex items-start list-item-glow">
+                <span>Полное затемнение.</span>
+              </li>
+              <li class="flex items-start list-item-glow">
+                <span>Стена 3 м для «Giant Canvas».</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="layout" class="scroll-section glass-card p-8 rounded-2xl">
+        <h2>3. Планировка и зонирование</h2>
+        <div class="glow-divider"></div>
+        <pre
+          class="bg-black/50 text-center p-4 rounded-lg font-mono text-sm text-green-300 border border-gray-700 overflow-x-auto"
+        >
+┌─────────────── 3 ───────────────┐
+│  LOUNGE / BAR (диваны, диджей)  │
+├───── 1 ─────────┬──── 2 ────────┤
+│ SPIN ART (2 маш)│  BODY PAINT  │
+├───── 4 ─────────┴──────────────┤
+│ GIANT CANVAS  &  TESLA SHOW     │
+└─────────────────────────────────┘</pre
+        >
+      </section>
+
+      <section id="schedule" class="scroll-section glass-card p-8 rounded-2xl">
+        <h2>4. Сценарий</h2>
+        <div class="glow-divider"></div>
+        <ul class="space-y-4">
+          <li class="flex items-start">
+            <span class="font-mono text-indigo-400 w-28 flex-shrink-0"
+              >18:00</span
+            ><span class="text-white">Welcome & Wine Tasting</span>
+          </li>
+          <li class="flex items-start">
+            <span class="font-mono text-indigo-400 w-28 flex-shrink-0"
+              >18:20</span
+            ><span class="text-white"
+              >Арт-ротация: Spin-Art → Body Paint → Giant Canvas</span
+            >
+          </li>
+          <li class="flex items-start">
+            <span class="font-mono text-indigo-400 w-28 flex-shrink-0"
+              >19:45</span
+            ><span class="text-white">Неон-баттл: командный спид-пейнт</span>
+          </li>
+          <li class="flex items-start">
+            <span class="font-mono text-indigo-400 w-28 flex-shrink-0"
+              >20:15</span
+            ><span class="text-white">Tesla-mini шоу</span>
+          </li>
+          <li class="flex items-start">
+            <span class="font-mono text-indigo-400 w-28 flex-shrink-0"
+              >20:25</span
+            ><span class="text-white">DJ, танцы, свободное творчество</span>
+          </li>
+        </ul>
+      </section>
+
+      <section id="staff" class="scroll-section glass-card p-8 rounded-2xl">
+        <h2>5. Роли и персонал</h2>
+        <div class="glow-divider"></div>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4 text-center">
+          <div class="p-4 bg-black/30 rounded-lg">
+            <strong class="block text-blue-300">Event-lead</strong>Заказчик
+          </div>
+          <div class="p-4 bg-black/30 rounded-lg">
+            <strong class="block text-blue-300">Фасилитатор 1</strong>Spin-Art
+          </div>
+          <div class="p-4 bg-black/30 rounded-lg">
+            <strong class="block text-blue-300">Фасилитатор 2</strong>Body Paint
+          </div>
+          <div class="p-4 bg-black/30 rounded-lg">
+            <strong class="block text-blue-300">DJ / Техник</strong>Музыка и шоу
+          </div>
+          <div class="p-4 bg-black/30 rounded-lg">
+            <strong class="block text-blue-300">Сомелье</strong>Лекция и вино
+          </div>
+          <div class="p-4 bg-black/30 rounded-lg">
+            <strong class="block text-blue-300">Волонтёры (2)</strong>Помощь
+          </div>
+        </div>
+      </section>
+
+      <section id="budget" class="scroll-section glass-card p-8 rounded-2xl">
+        <h2>6. Бюджет</h2>
+        <div class="glow-divider"></div>
+        <div class="space-y-2">
+          <!-- Budget Items -->
+          <div
+            class="flex justify-between items-center py-2 border-b border-gray-700/50"
+          >
+            <span class="text-gray-300">Аренда (UV-бары, Spin-Art, Музыка)</span
+            ><span class="font-mono text-green-300">648 $</span>
+          </div>
+          <div
+            class="flex justify-between items-center py-2 border-b border-gray-700/50"
+          >
+            <span class="text-gray-300">Краски (Акрил, Body-paint)</span
+            ><span class="font-mono text-green-300">285 $</span>
+          </div>
+          <div
+            class="flex justify-between items-center py-2 border-b border-gray-700/50"
+          >
+            <span class="text-gray-300"
+              >Материалы (Холст, Tesla, Расходники)</span
+            ><span class="font-mono text-green-300">245 $</span>
+          </div>
+          <div
+            class="flex justify-between items-center py-2 border-b border-gray-700/50"
+          >
+            <span class="text-gray-300">Прочее (Мебель, LCBO Permit)</span
+            ><span class="font-mono text-green-300">295 $</span>
+          </div>
+        </div>
+        <div class="mt-6 pt-4 border-t-2 border-pink-500/50 text-right">
+          <p class="text-lg">
+            Итого инвентарь:
+            <span class="font-mono font-bold text-white">1 473 $</span>
+          </p>
+          <p class="text-lg">
+            Venue: <span class="font-mono font-bold text-white">700 $</span>
+          </p>
+          <p class="text-2xl font-bold mt-2">
+            Grand Total:
+            <span
+              class="font-mono text-green-300"
+              style="text-shadow: 0 0 8px var(--glow-green)"
+              >2 173 $ + HST</span
+            >
+          </p>
+        </div>
+      </section>
+
+      <section id="guests" class="scroll-section glass-card p-8 rounded-2xl">
+        <h2>7. Подготовка гостей</h2>
+        <div class="glow-divider"></div>
+        <div class="space-y-4">
+          <p>
+            <strong class="text-pink-300">За 5 нед:</strong> Save-the-date,
+            Google-форма, дресс-код (белый хлопок).
+          </p>
+          <p>
+            <strong class="text-pink-300">За 7 дней:</strong> Reminder (ID для
+            вина, очки вместо линз).
+          </p>
+          <p>
+            <strong class="text-pink-300">За 2 часа:</strong> WhatsApp-пинг
+            (адрес, парковка, Wi-Fi).
+          </p>
+        </div>
+      </section>
+
+      <section
+        id="checklists"
+        class="scroll-section glass-card p-8 rounded-2xl"
+      >
+        <h2>8. Чек-листы</h2>
+        <div class="glow-divider"></div>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="font-bold text-xl text-white mb-4">Долгосрочный</h3>
+            <ul class="space-y-2 text-gray-300">
+              <li class="list-item-glow">
+                <span
+                  ><strong class="text-indigo-300">8 нед:</strong> Бронь
+                  площадки</span
+                >
+              </li>
+              <li class="list-item-glow">
+                <span
+                  ><strong class="text-indigo-300">6 нед:</strong> Заказ
+                  оборудования</span
+                >
+              </li>
+              <li class="list-item-glow">
+                <span
+                  ><strong class="text-indigo-300">4 нед:</strong> Покупка
+                  красок, договор с DJ</span
+                >
+              </li>
+              <li class="list-item-glow">
+                <span
+                  ><strong class="text-indigo-300">2 нед:</strong> Финальный
+                  guest-лист</span
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-bold text-xl text-white mb-4">День мероприятия</h3>
+            <ul class="space-y-2 text-gray-300">
+              <li class="list-item-glow">
+                <span
+                  ><strong class="text-indigo-300">15:00:</strong>
+                  Доставка</span
+                >
+              </li>
+              <li class="list-item-glow">
+                <span
+                  ><strong class="text-indigo-300">17:00:</strong> Сет-ап,
+                  брифинг</span
+                >
+              </li>
+              <li class="list-item-glow">
+                <span
+                  ><strong class="text-indigo-300">18:00:</strong> Welcome</span
+                >
+              </li>
+              <li class="list-item-glow">
+                <span
+                  ><strong class="text-indigo-300">23:00:</strong>
+                  Завершение</span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="risks" class="scroll-section glass-card p-8 rounded-2xl">
+        <h2>9. Риски и решения</h2>
+        <div class="glow-divider"></div>
+        <div class="space-y-4">
+          <p>
+            <strong class="text-pink-400">Риск:</strong> Гости боятся
+            испачкаться. /
+            <strong class="text-green-400">Решение:</strong> Одноразовые халаты,
+            перчатки.
+          </p>
+          <p>
+            <strong class="text-pink-400">Риск:</strong> Tesla-помехи звуку. /
+            <strong class="text-green-400">Решение:</strong> Coil ON только для
+            шоу.
+          </p>
+          <p>
+            <strong class="text-pink-400">Риск:</strong> Жалоба на шум. /
+            <strong class="text-green-400">Решение:</strong> SPL &lt; 92 dB,
+            после 22:00 - moderate house.
+          </p>
+        </div>
+      </section>
+
+      <section id="kpi" class="scroll-section glass-card p-8 rounded-2xl">
+        <h2>10. KPI успеха</h2>
+        <div class="glow-divider"></div>
+        <ul class="space-y-2 text-gray-300">
+          <li class="flex items-start list-item-glow">
+            <span>≥ 25 гостей остаются ≥ 3 часа.</span>
+          </li>
+          <li class="flex items-start list-item-glow">
+            <span>80%+ уносят сувенир.</span>
+          </li>
+          <li class="flex items-start list-item-glow">
+            <span>0 травм, 0 повреждений.</span>
+          </li>
+          <li class="flex items-start list-item-glow">
+            <span>NPS опрошенных ≥ 9/10.</span>
+          </li>
+        </ul>
+      </section>
+
+      <section id="ideas" class="scroll-section glass-card p-8 rounded-2xl">
+        <h2>11. Дополнительные идеи</h2>
+        <div class="glow-divider"></div>
+        <div class="grid md:grid-cols-2 gap-4">
+          <p class="p-4 bg-black/30 rounded-lg">
+            <strong>Неон-коридор</strong> — insta-tunnel из флуо-ленты.
+          </p>
+          <p class="p-4 bg-black/30 rounded-lg">
+            <strong>Общий арт-объект</strong> — холст режется на 30 квадратов.
+          </p>
+          <p class="p-4 bg-black/30 rounded-lg">
+            <strong>Blind wine-tasting game</strong> — с неоновыми стикерами.
+          </p>
+          <p class="p-4 bg-black/30 rounded-lg">
+            <strong>Ультрафиолетовая Jenga</strong> — с пожеланиями на брусках.
+          </p>
+        </div>
+      </section>
+
+      <section id="inspiration" class="scroll-section">
+        <h2 class="text-center">12. Вдохновение</h2>
+        <div class="glow-divider mx-auto"></div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div
+            class="group rounded-xl overflow-hidden glass-card p-1 col-span-2 row-span-2"
+          >
+            <img
+              src="img/neon_b/ChatGPT Image Jun 19, 2025, 08_28_25 PM.png"
+              alt="Совместное творчество"
+              class="w-full h-full object-cover rounded-lg transform group-hover:scale-105 transition-transform duration-500"
+              onerror="this.onerror=null;this.src='https://placehold.co/600x400/000000/ffffff?text=Image';"
+            />
+          </div>
+          <div class="group rounded-xl overflow-hidden glass-card p-1">
+            <img
+              src="img/neon_b/many_body_art.jpg"
+              alt="Неоновый боди-арт"
+              class="w-full h-full object-cover rounded-lg transform group-hover:scale-105 transition-transform duration-500"
+              onerror="this.onerror=null;this.src='https://placehold.co/600x400/000000/ffffff?text=Image';"
+            />
+          </div>
+          <div class="group rounded-xl overflow-hidden glass-card p-1">
+            <img
+              src="img/neon_b/ChatGPT Image Jun 19, 2025, 08_03_11 PM.png"
+              alt="Светящийся Spin-Art"
+              class="w-full h-full object-cover rounded-lg transform group-hover:scale-105 transition-transform duration-500"
+              onerror="this.onerror=null;this.src='https://placehold.co/600x400/000000/ffffff?text=Image';"
+            />
+          </div>
+          <div
+            class="group rounded-xl overflow-hidden glass-card p-1 col-span-2"
+          >
+            <img
+              src="img/neon_b/ChatGPT Image Jun 19, 2025, 08_28_22 PM.png"
+              alt="Атмосфера вечеринки"
+              class="w-full h-full object-cover rounded-lg transform group-hover:scale-105 transition-transform duration-500"
+              onerror="this.onerror=null;this.src='https://placehold.co/600x400/000000/ffffff?text=Image';"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="post-event"
+        class="scroll-section glass-card p-8 rounded-2xl"
+      >
+        <h2>13. Post-event</h2>
+        <div class="glow-divider"></div>
+        <ul class="space-y-2 text-gray-300">
+          <li class="flex items-start list-item-glow">
+            <span>Отправить фото/видео и сканы холста гостям.</span>
+          </li>
+          <li class="flex items-start list-item-glow">
+            <span>Собрать фидбэк через Google-опрос.</span>
+          </li>
+          <li class="flex items-start list-item-glow">
+            <span>Вернуть арендованное оборудование.</span>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="text-center p-8 mt-12">
+      <p class="text-gray-500 text-sm">Glow-Art Birthday Plan © 2025</p>
+    </footer>
+
+    <script>
+      const parallaxBg = document.getElementById("parallax-bg");
+      const heroTitle = document.getElementById("hero-title");
+
+      window.addEventListener("scroll", () => {
+        const scrollValue = window.scrollY;
+        if (parallaxBg)
+          parallaxBg.style.transform = `translateY(${
+            scrollValue * 0.4
+          }px) scale(1.1)`;
+        if (heroTitle) {
+          heroTitle.style.transform = `translateY(${scrollValue * 0.5}px)`;
+          heroTitle.style.opacity = 1 - scrollValue / 400;
+        }
+      });
+
+      const sections = document.querySelectorAll(".scroll-section");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold: 0.1,
+        }
+      );
+
+      sections.forEach((section) => {
+        observer.observe(section);
+      });
+    </script>
+  </body>
+</html>

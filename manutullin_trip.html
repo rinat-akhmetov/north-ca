@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Путешествие на остров Манитулин: Таймлайн</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f9ff;
+            /* Небесно-голубой фон */
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            /* Смещение для кружка */
+            top: 50%;
+            transform: translateY(-50%);
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: #3b82f6;
+            /* Синий цвет для кружков */
+            border: 2px solid white;
+            z-index: 10;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #9ca3af;
+            /* Серая линия */
+            margin-left: -1px;
+            /* Центрирование линии относительно кружков */
+        }
+
+        /* Адаптация для мобильных устройств */
+        @media (max-width: 768px) {
+            .timeline-item {
+                margin-left: 20px;
+                /* Сдвиг контента вправо от линии */
+            }
+
+            .timeline-item::before {
+                left: -28px;
+                /* Смещение кружка левее для мобильных */
+            }
+
+            .timeline-line {
+                left: -20px;
+                /* Смещение линии левее для мобильных */
+            }
+
+            .timeline-content {
+                width: calc(100% - 30px);
+                /* Ширина контента с отступом */
+            }
+        }
+
+        .map-container {
+            position: relative;
+            overflow: hidden;
+            padding-top: 56.25%;
+            /* 16:9 Aspect Ratio */
+            height: 0;
+        }
+
+        .map-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    </style>
+</head>
+
+<body class="text-gray-800">
+    <div class="container mx-auto p-4 md:p-8">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-blue-600">Ваше путешествие на остров Манитулин</h1>
+            <p class="text-xl text-gray-600 mt-2">24 - 25 Мая, 2025</p>
+        </header>
+
+        <div class="relative">
+            <div class="hidden md:block absolute top-0 bottom-0 left-1/2 w-1 bg-blue-500 rounded-full -ml-0.5"></div>
+
+            <section class="mb-16">
+                <h2 class="text-3xl font-semibold text-center text-blue-700 mb-8 sticky top-0 bg-f0f9ff py-4 z-10">
+                    Суббота, 24 Мая 2025: Дорога и прибытие</h2>
+                <div class="space-y-12">
+
+                    <div class="timeline-item md:flex md:items-start md:space-x-8 relative pl-8 md:pl-0">
+                        <div class="md:w-1/2 md:text-right md:pr-8">
+                            <div
+                                class="bg-white p-6 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-blue-200">
+                                <p class="text-blue-600 font-semibold text-lg">~8:45 утра</p>
+                                <h3 class="text-xl font-bold mt-1 mb-2">Выезд из Торонто</h3>
+                                <p class="text-gray-700 mb-4">Начало вашего приключения! Отправляемся в сторону
+                                    Тобермори.</p>
+                                <div class="map-container rounded-md shadow-sm overflow-hidden">
+                                    <iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d1494570.032698914!2d-81.0707918809011!3d44.63015003031088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x89d4cb90d7c63ba5%3A0x323555502ab4c477!2sToronto%2C+ON!3m2!1d43.653226!2d-79.3831843!4m5!1s0x8829ce5f954908d7%3A0x73635eff9311845d!2sTobermory%2C+ON!3m2!1d45.2546919!2d-81.6644797!5e0!3m2!1sru!2sca!4v1684850000000!5m2!1sru!2sca"
+                                        loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                                        title="Карта маршрута из Торонто в Тобермори">
+                                    </iframe>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="hidden md:block relative w-4 h-4 bg-blue-500 rounded-full mt-8 self-start border-4 border-white shadow-md">
+                        </div>
+                        <div class="md:w-1/2 md:pl-8 md:pt-0 pt-4"></div>
+                    </div>
+
+                    <div class="timeline-item md:flex md:items-start md:space-x-8 relative pl-8 md:pl-0">
+                        <div class="md:w-1/2 md:pr-8 md:order-2 md:text-left md:pl-8">
+                            <div
+                                class="bg-white p-6 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-blue-200">
+                                <p class="text-blue-600 font-semibold text-lg">~12:30 дня</p>
+                                <h3 class="text-xl font-bold mt-1 mb-2">Прибытие в Тобермори</h3>
+                                <p class="text-gray-700">Прибываем в живописный Тобермори и регистрируемся на паром.</p>
+                                <img src="img/manitoulin_island/tobermorey.jpg"
+                                    alt="Изображение паромного терминала в Тобермори"
+                                    class="mt-4 rounded-md shadow-sm w-full h-auto object-cover"
+                                    onerror="this.src='https://placehold.co/600x400/cccccc/ffffff?text=Ошибка+загрузки+изображения'; this.alt='Ошибка загрузки изображения терминала';">
+                            </div>
+                        </div>
+                        <div
+                            class="hidden md:block relative w-4 h-4 bg-blue-500 rounded-full mt-8 self-start border-4 border-white shadow-md md:order-1">
+                        </div>
+                        <div class="md:w-1/2 md:text-right md:pr-8 md:order-0 pt-4 md:pt-0"></div>
+                    </div>
+
+                    <div class="timeline-item md:flex md:items-start md:space-x-8 relative pl-8 md:pl-0">
+                        <div class="md:w-1/2 md:text-right md:pr-8">
+                            <div
+                                class="bg-white p-6 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-blue-200">
+                                <p class="text-blue-600 font-semibold text-lg">1:30 дня</p>
+                                <h3 class="text-xl font-bold mt-1 mb-2">Отправление парома Chi-Cheemaun</h3>
+                                <p class="text-gray-700">Поднимаемся на борт "Большой Каноэ" и отправляемся на остров
+                                    Манитулин.</p>
+                                <img src="img/manitoulin_island/flowerpot_FW.jpeg"
+                                    alt="Изображение парома Chi-Cheemaun"
+                                    class="mt-4 rounded-md shadow-sm w-full h-auto object-cover"
+                                    onerror="this.src='https://placehold.co/600x400/cccccc/ffffff?text=Ошибка+загрузки+изображения'; this.alt='Ошибка загрузки изображения парома';">
+                            </div>
+                        </div>
+                        <div
+                            class="hidden md:block relative w-4 h-4 bg-blue-500 rounded-full mt-8 self-start border-4 border-white shadow-md">
+                        </div>
+                        <div class="md:w-1/2 md:pl-8 md:pt-0 pt-4"></div>
+                    </div>
+
+                    <div class="timeline-item md:flex md:items-start md:space-x-8 relative pl-8 md:pl-0">
+                        <div class="md:w-1/2 md:pr-8 md:order-2 md:text-left md:pl-8">
+                            <div
+                                class="bg-white p-6 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-blue-200">
+                                <p class="text-blue-600 font-semibold text-lg">~3:30 дня</p>
+                                <h3 class="text-xl font-bold mt-1 mb-2">Прибытие в Саут-Беймаут</h3>
+                                <p class="text-gray-700">Ступаем на землю острова Манитулин! Время насладиться первыми
+                                    видами.</p>
+                                <img src="https://placehold.co/600x400/a78bfa/ffffff?text=Саут-Беймаут"
+                                    alt="Изображение прибытия в Саут-Беймаут"
+                                    class="mt-4 rounded-md shadow-sm w-full h-auto object-cover"
+                                    onerror="this.src='https://placehold.co/600x400/cccccc/ffffff?text=Ошибка+загрузки+изображения'; this.alt='Ошибка загрузки изображения Саут-Беймаут';">
+                            </div>
+                        </div>
+                        <div
+                            class="hidden md:block relative w-4 h-4 bg-blue-500 rounded-full mt-8 self-start border-4 border-white shadow-md md:order-1">
+                        </div>
+                        <div class="md:w-1/2 md:text-right md:pr-8 md:order-0 pt-4 md:pt-0"></div>
+                    </div>
+
+                    <div class="timeline-item md:flex md:items-start md:space-x-8 relative pl-8 md:pl-0">
+                        <div class="md:w-1/2 md:text-right md:pr-8">
+                            <div
+                                class="bg-white p-6 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-blue-200">
+                                <p class="text-blue-600 font-semibold text-lg">~3:30 – 4:30 дня</p>
+                                <h3 class="text-xl font-bold mt-1 mb-2">Дорога к месту ночлега</h3>
+                                <p class="text-gray-700 mb-4">Едем через живописные пейзажи острова к нашему уютному
+                                    ранчо "Kicking Mule Guest Ranch".</p>
+                <div class="map-container rounded-md shadow-sm overflow-hidden">
+                    <iframe
+                        src="https://maps.google.com/maps?output=embed&saddr=South+Baymouth+Ferry+Terminal,South+Baymouth,ON&daddr=Kicking+Mule+Ranch,101+Gauthier+Road,Tehkummah,ON&hl=ru"
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Карта маршрута до Kicking Mule Guest Ranch">
+                    </iframe>
+                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="hidden md:block relative w-4 h-4 bg-blue-500 rounded-full mt-8 self-start border-4 border-white shadow-md">
+                        </div>
+                        <div class="md:w-1/2 md:pl-8 md:pt-0 pt-4"></div>
+                    </div>
+
+                    <div class="timeline-item md:flex md:items-start md:space-x-8 relative pl-8 md:pl-0">
+                        <div class="md:w-1/2 md:pr-8 md:order-2 md:text-left md:pl-8">
+                            <div
+                                class="bg-white p-6 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-blue-200">
+                                <p class="text-blue-600 font-semibold text-lg">~4:30 – 5:00 вечера</p>
+                                <h3 class="text-xl font-bold mt-1 mb-2">Заселение и отдых</h3>
+                                <p class="text-gray-700">Прибыли в "Kicking Mule Guest Ranch"! Время распаковать вещи,
+                                    расслабиться и насладиться вечером.</p>
+                                <img src="img/manitoulin_island/Kicking Mule Guest Ranch Night.jpeg"
+                                    alt="Изображение Kicking Mule Guest Ranch"
+                                    class="mt-4 rounded-md shadow-sm w-full h-auto object-cover"
+                                    onerror="this.src='https://placehold.co/600x400/cccccc/ffffff?text=Ошибка+загрузки+изображения'; this.alt='Ошибка загрузки изображения ранчо';">
+                            </div>
+                        </div>
+                        <div
+                            class="hidden md:block relative w-4 h-4 bg-blue-500 rounded-full mt-8 self-start border-4 border-white shadow-md md:order-1">
+                        </div>
+                        <div class="md:w-1/2 md:text-right md:pr-8 md:order-0 pt-4 md:pt-0"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-16">
+                <h2 class="text-3xl font-semibold text-center text-blue-700 mb-8 sticky top-0 bg-f0f9ff py-4 z-10">
+                    Воскресенье, 25 Мая 2025: Хайкинг и возвращение</h2>
+                <div class="space-y-12">
+                    <div class="timeline-item md:flex md:items-start md:space-x-8 relative pl-8 md:pl-0">
+                        <div class="md:w-1/2 md:text-right md:pr-8">
+                            <div
+                                class="bg-white p-6 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-blue-200">
+                                <p class="text-blue-600 font-semibold text-lg">Утро</p>
+                                <h3 class="text-xl font-bold mt-1 mb-2">Завтрак и сборы</h3>
+                                <p class="text-gray-700">Начинаем день с вкусного завтрака и готовимся к походу на "Cup
+                                    and Saucer".</p>
+                                <img src="img/manitoulin_island/Kicking Mule Guest Ranch.jpeg"
+                                    alt="Изображение завтрака на природе"
+                                    class="mt-4 rounded-md shadow-sm w-full h-auto object-cover"
+                                    onerror="this.src='https://placehold.co/600x400/cccccc/ffffff?text=Ошибка+загрузки+изображения'; this.alt='Ошибка загрузки изображения завтрака';">
+                            </div>
+                        </div>
+                        <div
+                            class="hidden md:block relative w-4 h-4 bg-blue-500 rounded-full mt-8 self-start border-4 border-white shadow-md">
+                        </div>
+                        <div class="md:w-1/2 md:pl-8 md:pt-0 pt-4"></div>
+                    </div>
+
+                    <div class="timeline-item md:flex md:items-start md:space-x-8 relative pl-8 md:pl-0">
+                        <div class="md:w-1/2 md:pr-8 md:order-2 md:text-left md:pl-8">
+                            <div
+                                class="bg-white p-6 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-blue-200">
+                                <p class="text-blue-600 font-semibold text-lg">~9:00 утра – 1:00 дня</p>
+                                <h3 class="text-xl font-bold mt-1 mb-2">Хайкинг "Cup and Saucer"</h3>
+                                <p class="text-gray-700">Исследуем знаменитую тропу, наслаждаемся видами со скал.
+                                    Незабываемые впечатления!</p>
+                                <img src="img/manitoulin_island/Cup and Saucer trail.jpg"
+                                    alt="Изображение тропы Cup and Saucer со скалами"
+                                    class="mt-4 rounded-md shadow-sm w-full h-auto object-cover"
+                                    onerror="this.src='https://placehold.co/600x400/cccccc/ffffff?text=Ошибка+загрузки+изображения'; this.alt='Ошибка загрузки изображения тропы';">
+                            </div>
+                        </div>
+                        <div
+                            class="hidden md:block relative w-4 h-4 bg-blue-500 rounded-full mt-8 self-start border-4 border-white shadow-md md:order-1">
+                        </div>
+                        <div class="md:w-1/2 md:text-right md:pr-8 md:order-0 pt-4 md:pt-0"></div>
+                    </div>
+
+                    <div class="timeline-item md:flex md:items-start md:space-x-8 relative pl-8 md:pl-0">
+                        <div class="md:w-1/2 md:text-right md:pr-8">
+                            <div
+                                class="bg-white p-6 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-blue-200">
+                                <p class="text-blue-600 font-semibold text-lg">~1:00 – 2:00 дня</p>
+                                <h3 class="text-xl font-bold mt-1 mb-2">Обед и отдых</h3>
+                                <p class="text-gray-700">Восстанавливаем силы после хайкинга вкусным обедом.</p>
+                                <img src="https://placehold.co/600x400/f59e0b/ffffff?text=Обед+после+хайкинга"
+                                    alt="Изображение пикника или кафе"
+                                    class="mt-4 rounded-md shadow-sm w-full h-auto object-cover"
+                                    onerror="this.src='https://placehold.co/600x400/cccccc/ffffff?text=Ошибка+загрузки+изображения'; this.alt='Ошибка загрузки изображения обеда';">
+                            </div>
+                        </div>
+                        <div
+                            class="hidden md:block relative w-4 h-4 bg-blue-500 rounded-full mt-8 self-start border-4 border-white shadow-md">
+                        </div>
+                        <div class="md:w-1/2 md:pl-8 md:pt-0 pt-4"></div>
+                    </div>
+
+                    <div class="timeline-item md:flex md:items-start md:space-x-8 relative pl-8 md:pl-0">
+                        <div class="md:w-1/2 md:pr-8 md:order-2 md:text-left md:pl-8">
+                        <div class="bg-white p-6 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-blue-200">
+                            <p class="text-blue-600 font-semibold text-lg">~2:30 – 3:00 дня</p>
+                            <h3 class="text-xl font-bold mt-1 mb-2">Дорога к парому</h3>
+                            <p class="text-gray-700 mb-4">Выезжаем в Саут-Беймаут, чтобы успеть на паром домой.</p>
+                            <div class="map-container shadow-sm">
+                                <iframe
+                                    src="https://maps.google.com/maps?q=Cup%20and%20Saucer%20Trail%2C%20Sheguiandah%2C%20ON%20to%20South%20Baymouth%20Ferry%20Terminal%2C%20ON&output=embed"
+                                    loading="lazy" title="Карта маршрута от Cup and Saucer до парома Саут-Беймаут">
+                                </iframe>
+                            </div>
+                        </div>
+                        </div>
+                        <div
+                            class="hidden md:block relative w-4 h-4 bg-blue-500 rounded-full mt-8 self-start border-4 border-white shadow-md md:order-1">
+                        </div>
+                        <div class="md:w-1/2 md:text-right md:pr-8 md:order-0 pt-4 md:pt-0"></div>
+                    </div>
+
+                    <div class="timeline-item md:flex md:items-start md:space-x-8 relative pl-8 md:pl-0">
+                        <div class="md:w-1/2 md:text-right md:pr-8">
+                            <div
+                                class="bg-white p-6 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-blue-200">
+                                <p class="text-blue-600 font-semibold text-lg">3:50 дня</p>
+                                <h3 class="text-xl font-bold mt-1 mb-2">Отправление парома из Саут-Беймаут</h3>
+                                <p class="text-gray-700">Прощаемся с островом Манитулин и плывем обратно в Тобермори.
+                                </p>
+                                <img src="https://placehold.co/600x400/0ea5e9/ffffff?text=Паром+отплывает"
+                                    alt="Изображение парома, отплывающего от острова"
+                                    class="mt-4 rounded-md shadow-sm w-full h-auto object-cover"
+                                    onerror="this.src='https://placehold.co/600x400/cccccc/ffffff?text=Ошибка+загрузки+изображения'; this.alt='Ошибка загрузки изображения отплывающего парома';">
+                            </div>
+                        </div>
+                        <div
+                            class="hidden md:block relative w-4 h-4 bg-blue-500 rounded-full mt-8 self-start border-4 border-white shadow-md">
+                        </div>
+                        <div class="md:w-1/2 md:pl-8 md:pt-0 pt-4"></div>
+                    </div>
+
+                    <div class="timeline-item md:flex md:items-start md:space-x-8 relative pl-8 md:pl-0">
+                        <div class="md:w-1/2 md:pr-8 md:order-2 md:text-left md:pl-8">
+                            <div
+                                class="bg-white p-6 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-blue-200">
+                                <p class="text-blue-600 font-semibold text-lg">~5:50 вечера</p>
+                                <h3 class="text-xl font-bold mt-1 mb-2">Прибытие в Тобермори</h3>
+                                <p class="text-gray-700">Снова на материке. Готовимся к последнему отрезку пути.</p>
+                                <img src="https://placehold.co/600x400/34d399/ffffff?text=Тобермори+вечером"
+                                    alt="Изображение Тобермори вечером"
+                                    class="mt-4 rounded-md shadow-sm w-full h-auto object-cover"
+                                    onerror="this.src='https://placehold.co/600x400/cccccc/ffffff?text=Ошибка+загрузки+изображения'; this.alt='Ошибка загрузки изображения вечернего Тобермори';">
+                            </div>
+                        </div>
+                        <div
+                            class="hidden md:block relative w-4 h-4 bg-blue-500 rounded-full mt-8 self-start border-4 border-white shadow-md md:order-1">
+                        </div>
+                        <div class="md:w-1/2 md:text-right md:pr-8 md:order-0 pt-4 md:pt-0"></div>
+                    </div>
+
+                    <div class="timeline-item md:flex md:items-start md:space-x-8 relative pl-8 md:pl-0">
+                        <div class="md:w-1/2 md:text-right md:pr-8">
+                            <div class="bg-white p-6 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-blue-200">
+                                <p class="text-blue-600 font-semibold text-lg">~5:50 вечера – 9:45 вечера</p>
+                                <h3 class="text-xl font-bold mt-1 mb-2">Дорога домой в Торонто</h3>
+                                <p class="text-gray-700 mb-4">Едем обратно, вспоминая прекрасные моменты поездки.</p>
+                                <div class="map-container shadow-sm">
+                                    <iframe src="https://maps.google.com/maps?q=Tobermory%2C%20ON%20to%20Toronto%2C%20ON&output=embed"
+                                        loading="lazy" title="Карта маршрута из Тобермори в Торонто">
+                                    </iframe>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="hidden md:block relative w-4 h-4 bg-blue-500 rounded-full mt-8 self-start border-4 border-white shadow-md">
+                        </div>
+                        <div class="md:w-1/2 md:pl-8 md:pt-0 pt-4"></div>
+                    </div>
+
+                    <div class="timeline-item md:flex md:items-start md:space-x-8 relative pl-8 md:pl-0">
+                        <div class="md:w-1/2 md:pr-8 md:order-2 md:text-left md:pl-8">
+                            <div
+                                class="bg-white p-6 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-blue-200">
+                                <p class="text-blue-600 font-semibold text-lg">~9:45 вечера</p>
+                                <h3 class="text-xl font-bold mt-1 mb-2">Прибытие в Торонто</h3>
+                                <p class="text-gray-700">Путешествие завершено! До новых встреч, Онтарио!</p>
+                                <img src="https://placehold.co/600x400/1f2937/ffffff?text=Ночной+Торонто"
+                                    alt="Изображение ночного Торонто"
+                                    class="mt-4 rounded-md shadow-sm w-full h-auto object-cover"
+                                    onerror="this.src='https://placehold.co/600x400/cccccc/ffffff?text=Ошибка+загрузки+изображения'; this.alt='Ошибка загрузки изображения ночного Торонто';">
+                            </div>
+                        </div>
+                        <div
+                            class="hidden md:block relative w-4 h-4 bg-blue-500 rounded-full mt-8 self-start border-4 border-white shadow-md md:order-1">
+                        </div>
+                        <div class="md:w-1/2 md:text-right md:pr-8 md:order-0 pt-4 md:pt-0"></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer class="text-center mt-16 py-8 border-t border-gray-300">
+            <p class="text-gray-600">© 2025 Ваше Путешествие Мечты. Спланировано с любовью.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Небольшой скрипт для улучшения отображения таймлайна на мобильных устройствах
+        function adjustTimelineForMobile() {
+            const timelineItems = document.querySelectorAll('.timeline-item');
+            const timelineLineGlobal = document.querySelector('.hidden.md\\:block.absolute.top-0.bottom-0.left-1\\/2');
+
+            if (window.innerWidth < 768) {
+                if (timelineLineGlobal) timelineLineGlobal.style.display = 'none';
+
+                timelineItems.forEach((item, index) => {
+                    if (!item.querySelector('.timeline-line-local')) {
+                        const localLine = document.createElement('div');
+                        localLine.className = 'timeline-line-local absolute top-0 bottom-0 w-0.5 bg-blue-400 -ml-0.5';
+                        localLine.style.left = '-20px';
+                        if (index === timelineItems.length - 1) {
+                            localLine.style.bottom = 'auto';
+                            localLine.style.height = 'calc(50% + 8px)';
+                        } else if (index === 0 && timelineItems.length > 1) {
+                            localLine.style.top = 'calc(50% - 8px)';
+                        }
+                        item.style.position = 'relative';
+                        item.insertBefore(localLine, item.firstChild);
+                    }
+
+                    let dot = item.querySelector('.hidden.md\\:block.relative.w-4.h-4');
+                    if (!dot) {
+                        dot = document.createElement('div');
+                        dot.className = 'absolute w-4 h-4 bg-blue-500 rounded-full border-4 border-white shadow-md';
+                        dot.style.left = '-28px';
+                        dot.style.top = 'calc(50% - 8px)';
+                        dot.style.zIndex = '5';
+                        item.insertBefore(dot, item.children[1]);
+                    } else {
+                        dot.style.display = 'block';
+                        dot.style.position = 'absolute';
+                        dot.style.left = '-28px';
+                        dot.style.top = 'calc(50% - 8px)';
+                        dot.style.marginTop = '0';
+                    }
+                });
+            } else {
+                if (timelineLineGlobal) timelineLineGlobal.style.display = 'block';
+                timelineItems.forEach(item => {
+                    const localLine = item.querySelector('.timeline-line-local');
+                    if (localLine) localLine.remove();
+                    const desktopDot = item.querySelector('.hidden.md\\:block.relative.w-4.h-4');
+                    if (desktopDot) {
+                        desktopDot.style.position = 'relative';
+                        desktopDot.style.left = 'auto';
+                        desktopDot.style.top = 'auto';
+                        desktopDot.style.marginTop = '2rem';
+                    }
+                });
+            }
+        }
+
+        window.addEventListener('resize', adjustTimelineForMobile);
+        document.addEventListener('DOMContentLoaded', adjustTimelineForMobile);
+    </script>
+</body>
+
+</html>

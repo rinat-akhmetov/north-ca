@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Интерактивный план вечеринки «Sci-Art Lab Birthday»</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Animate On Scroll Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Icon Library -->
+    <script src="https://unpkg.com/phosphor-icons"></script>
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #0f172a; /* Dark slate background */
+        color: #e2e8f0; /* Light slate text */
+      }
+
+      .parallax-container {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+        color: white;
+        text-align: center;
+      }
+
+      .parallax-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+        background-image: url("https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        filter: brightness(0.5) contrast(1.1);
+      }
+
+      .glass-card {
+        background: rgba(
+          15,
+          23,
+          42,
+          0.6
+        ); /* Darker, less transparent background */
+        -webkit-backdrop-filter: blur(20px);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 1.5rem;
+        padding: 2.5rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+      }
+
+      h2 {
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        color: #f8fafc;
+        margin-bottom: 1.5rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        padding-bottom: 0.75rem;
+        font-size: 2.5rem;
+      }
+
+      h3 {
+        font-weight: 700;
+        color: #cbd5e1;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        font-size: 1.75rem;
+      }
+
+      .timeline {
+        position: relative;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .timeline::after {
+        content: "";
+        position: absolute;
+        width: 6px;
+        background-color: rgba(255, 255, 255, 0.15);
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        margin-left: -3px;
+        border-radius: 3px;
+      }
+      .timeline-container {
+        padding: 10px 40px;
+        position: relative;
+        background-color: inherit;
+        width: 50%;
+      }
+      .timeline-container.left {
+        left: 0;
+      }
+      .timeline-container.right {
+        left: 50%;
+      }
+      .timeline-container::after {
+        content: "";
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        right: -13px;
+        background-color: #0f172a;
+        border: 4px solid #4f46e5;
+        top: 25px;
+        border-radius: 50%;
+        z-index: 1;
+      }
+      .timeline-container.right::after {
+        left: -13px;
+      }
+      .timeline-content {
+        padding: 20px 30px;
+        position: relative;
+        background: rgba(30, 41, 59, 0.7);
+        border-radius: 1rem;
+      }
+
+      .icon-list-item {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin-bottom: 0.5rem;
+      }
+      .icon-list-item i {
+        color: #818cf8;
+        font-size: 1.5rem;
+      }
+
+      .pre-code {
+        background-color: #020617;
+        color: #94a3b8;
+        padding: 1.5rem;
+        border-radius: 1rem;
+        font-family: monospace;
+        white-space: pre;
+        overflow-x: auto;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Parallax Header -->
+    <div class="parallax-container">
+      <div class="parallax-bg"></div>
+      <div class="z-10 p-4" data-aos="fade-up">
+        <h1
+          class="text-5xl md:text-7xl font-extrabold tracking-tight text-white"
+        >
+          Sci-Art Lab Birthday
+        </h1>
+        <p class="mt-4 text-2xl text-slate-200">
+          Полный интерактивный план вечеринки
+        </p>
+        <svg
+          class="mx-auto mt-16 h-12 w-12 text-white animate-bounce"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M19 14l-7 7m0 0l-7-7m7 7V3"
+          />
+        </svg>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container mx-auto max-w-5xl p-4 sm:p-6 md:p-8 space-y-16">
+      <section id="concept" class="glass-card" data-aos="fade-up">
+        <h2 class="flex items-center gap-4">
+          <i class="ph-fill ph-atom"></i>1. Цель и концепция
+        </h2>
+        <p class="text-lg leading-relaxed text-slate-300">
+          Организовать камерное (до 30 гостей) мероприятие в стилистике научной
+          лаборатории и sci-fi, объединяющее интерактивные научные эксперименты
+          и творческие активности. Концепция «лаборатория искусств» отразит
+          бэкграунд именинницы и подарит гостям возможность поучаствовать в
+          шуточных опытах и техно-арт мастерских. Атмосфера — футуристичный
+          научный клуб с акцентом на декор high-tech и «биохакерских» деталях.
+        </p>
+      </section>
+
+      <!-- NEW INSPIRATION SECTION -->
+      <section id="inspiration" class="glass-card" data-aos="fade-up">
+        <h2 class="flex items-center gap-4">
+          <i class="ph-fill ph-images"></i>Фото для вдохновения
+        </h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mt-6">
+          <div data-aos="zoom-in">
+            <img
+              src="https://images.unsplash.com/photo-1576086213369-97a306d36557?q=80&w=800&auto=format&fit=crop"
+              class="rounded-lg shadow-lg hover:shadow-indigo-500/50 transition-all duration-300 hover:scale-105 cursor-pointer"
+              alt="Неоновые колбы в научной лаборатории"
+            />
+          </div>
+          <div data-aos="zoom-in" data-aos-delay="100">
+            <img
+              src="img/lab_b/ChatGPT Image Jun 19, 2025, 08_55_42 PM.png"
+              class="rounded-lg shadow-lg hover:shadow-indigo-500/50 transition-all duration-300 hover:scale-105 cursor-pointer"
+              alt="Светящийся коктейль в лабораторной посуде"
+            />
+          </div>
+          <div data-aos="zoom-in" data-aos-delay="200">
+            <img
+              src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?q=80&w=800&auto=format&fit=crop"
+              class="rounded-lg shadow-lg hover:shadow-indigo-500/50 transition-all duration-300 hover:scale-105 cursor-pointer"
+              alt="Человек в шлеме виртуальной реальности"
+            />
+          </div>
+          <div data-aos="zoom-in" data-aos-delay="300">
+            <img
+              src="https://images.unsplash.com/photo-1617791160536-598cf32026fb?q=80&w=800&auto=format&fit=crop"
+              class="rounded-lg shadow-lg hover:shadow-indigo-500/50 transition-all duration-300 hover:scale-105 cursor-pointer"
+              alt="Процесс 3D-печати абстрактной фигуры"
+            />
+          </div>
+          <div data-aos="zoom-in" data-aos-delay="400">
+            <img
+              src="img/lab_b/ChatGPT Image Jun 19, 2025, 09_02_41 PM.png"
+              class="rounded-lg shadow-lg hover:shadow-indigo-500/50 transition-all duration-300 hover:scale-105 cursor-pointer"
+              alt="Электрические разряды от катушки Теслы"
+            />
+          </div>
+          <div data-aos="zoom-in" data-aos-delay="500">
+            <img
+              src="img/lab_b/ChatGPT Image Jun 19, 2025, 08_55_48 PM.png"
+              class="rounded-lg shadow-lg hover:shadow-indigo-500/50 transition-all duration-300 hover:scale-105 cursor-pointer"
+              alt="Футуристический интерьер с неоновым светом"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="venue" class="glass-card" data-aos="fade-up">
+        <h2 class="flex items-center gap-4">
+          <i class="ph-fill ph-map-pin"></i>2. Площадка
+        </h2>
+        <h3 class="text-2xl">2.1 Приоритетные варианты</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-6">
+          <div
+            class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <h4 class="font-bold text-xl text-white">Site 3 Co-Laboratory</h4>
+            <p class="text-slate-400 mt-2">
+              Аутентичный «техно-гараж», есть оборудование. ≈ C$ 600
+            </p>
+          </div>
+          <div
+            class="bg-indigo-900/50 p-6 rounded-2xl ring-2 ring-indigo-400"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <h4 class="font-bold text-xl text-white">Studio Cozy</h4>
+            <p class="text-slate-400 mt-2">
+              Белые стены «под лабораторию», можно оформлять под себя. ≈ C$ 700
+            </p>
+          </div>
+          <div
+            class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <h4 class="font-bold text-xl text-white">Ontario Science Centre</h4>
+            <p class="text-slate-400 mt-2">
+              Тематическое место, но дорогая аренда. ≥ C$ 1500
+            </p>
+          </div>
+        </div>
+        <h3 class="text-2xl mt-8">2.2 Требования к площадке</h3>
+        <ul
+          class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4 mt-4 text-slate-300"
+        >
+          <li class="icon-list-item" data-aos="fade-right">
+            <i class="ph-fill ph-plugs"></i>Электричество: 3 линии по 15 A
+          </li>
+          <li class="icon-list-item" data-aos="fade-left">
+            <i class="ph-fill ph-arrows-out"></i>Потолок ≥ 3 м, вентиляция
+          </li>
+          <li class="icon-list-item" data-aos="fade-right">
+            <i class="ph-fill ph-moon"></i>Возможность затемнения
+          </li>
+          <li class="icon-list-item" data-aos="fade-left">
+            <i class="ph-fill ph-armchair"></i>Мобильная мебель
+          </li>
+          <li class="icon-list-item" data-aos="fade-right">
+            <i class="ph-fill ph-wine"></i>Разрешение на алкоголь (SOP)
+          </li>
+          <li class="icon-list-item" data-aos="fade-left">
+            <i class="ph-fill ph-truck"></i>Удобный подъезд/парковка
+          </li>
+        </ul>
+      </section>
+
+      <section id="zoning" class="glass-card" data-aos="fade-up">
+        <h2 class="flex items-center gap-4">
+          <i class="ph-fill ph-grid-four"></i>3. Планировка и зонирование
+        </h2>
+        <div class="pre-code my-6">
+          ┌─────────────── 1 ────────────────┐ │ LOUNGE / BAR (диваны, музыка) │
+          ├───── 2 ─────────┬───── 3 ───────┤ │ CHEM LAB зона │ VR/3D ART зона│
+          │ + коктейли │ + 3D-ручки/VR │ ├───── 4 ─────────┴───────────—───┤ │
+          MAIN STAGE: командный челлендж &│ │ научное демо-шоу │
+          └───────────────────────── выход ┘
+        </div>
+        <ul class="list-none space-y-2 text-base text-slate-300">
+          <li>
+            <strong>1. Chem Lab</strong> – молекулярные коктейли и
+            мини-эксперименты.
+          </li>
+          <li>
+            <strong>2. VR/3D Art</strong> – VR-рисование или создание фигурок
+            3D-ручками.
+          </li>
+          <li>
+            <strong>3. Lounge</strong> – зона отдыха, общение за столиками.
+          </li>
+          <li><strong>4. Stage</strong> – общие активности, научное шоу.</li>
+        </ul>
+      </section>
+
+      <section id="schedule" class="pt-8">
+        <h2 class="text-center flex items-center justify-center gap-4">
+          <i class="ph-fill ph-timer"></i>4. Сценарий (5 часов)
+        </h2>
+        <div class="timeline mt-12">
+          <div class="timeline-container left" data-aos="fade-right">
+            <div class="timeline-content">
+              <h3 class="text-xl font-bold text-white">17:00 – Монтаж</h3>
+              <p>Сборка оборудования, саундчек.</p>
+            </div>
+          </div>
+          <div class="timeline-container right" data-aos="fade-left">
+            <div class="timeline-content">
+              <h3 class="text-xl font-bold text-white">18:00 – Welcome 🧪</h3>
+              <p>Встреча гостей, коктейли в пробирках.</p>
+            </div>
+          </div>
+          <div class="timeline-container left" data-aos="fade-right">
+            <div class="timeline-content">
+              <h3 class="text-xl font-bold text-white">
+                18:20 – Ротация станций 🔄
+              </h3>
+              <p>Chem Lab, VR/3D Art, Micro Zone.</p>
+            </div>
+          </div>
+          <div class="timeline-container right" data-aos="fade-left">
+            <div class="timeline-content">
+              <h3 class="text-xl font-bold text-white">19:30 – Фуршет ☕</h3>
+              <p>Перерыв, «научные» закуски.</p>
+            </div>
+          </div>
+          <div class="timeline-container left" data-aos="fade-right">
+            <div class="timeline-content">
+              <h3 class="text-xl font-bold text-white">19:45 – Челлендж 🏆</h3>
+              <p>Командный конкурс: сборка «башни ДНК».</p>
+            </div>
+          </div>
+          <div class="timeline-container right" data-aos="fade-left">
+            <div class="timeline-content">
+              <h3 class="text-xl font-bold text-white">
+                20:10 – Science Show ⚡
+              </h3>
+              <p>«Слоновья зубная паста» и шоу Тесла.</p>
+            </div>
+          </div>
+          <div class="timeline-container left" data-aos="fade-right">
+            <div class="timeline-content">
+              <h3 class="text-xl font-bold text-white">20:20 – Free Zone 🎉</h3>
+              <p>Неформальное общение, танцы.</p>
+            </div>
+          </div>
+          <div class="timeline-container right" data-aos="fade-left">
+            <div class="timeline-content">
+              <h3 class="text-xl font-bold text-white">
+                22:30 – Завершение 📦
+              </h3>
+              <p>Прощание, уборка.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="roles" class="glass-card" data-aos="fade-up">
+        <h2 class="flex items-center gap-4">
+          <i class="ph-fill ph-users-three"></i>5. Роли и персонал
+        </h2>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-slate-300"
+        >
+          <div class="icon-list-item" data-aos="fade-up">
+            <i class="ph-fill ph-user-circle-gear"></i>
+            <div>
+              <h4 class="font-bold text-white">Event-lead</h4>
+              <p>Общая координация</p>
+            </div>
+          </div>
+          <div class="icon-list-item" data-aos="fade-up" data-aos-delay="50">
+            <i class="ph-fill ph-test-tube"></i>
+            <div>
+              <h4 class="font-bold text-white">Фасилитатор ChemLab</h4>
+              <p>Коктейли и опыты</p>
+            </div>
+          </div>
+          <div class="icon-list-item" data-aos="fade-up" data-aos-delay="100">
+            <i class="ph-fill ph-cube"></i>
+            <div>
+              <h4 class="font-bold text-white">Фасилитатор VR/Art</h4>
+              <p>VR и 3D-ручки</p>
+            </div>
+          </div>
+          <div class="icon-list-item" data-aos="fade-up" data-aos-delay="150">
+            <i class="ph-fill ph-magnifying-glass"></i>
+            <div>
+              <h4 class="font-bold text-white">Фасилитатор Micro</h4>
+              <p>Микроскоп и викторина</p>
+            </div>
+          </div>
+          <div class="icon-list-item" data-aos="fade-up" data-aos-delay="200">
+            <i class="ph-fill ph-speaker-high"></i>
+            <div>
+              <h4 class="font-bold text-white">DJ/Звукооператор</h4>
+              <p>Музыкальное оформление</p>
+            </div>
+          </div>
+          <div class="icon-list-item" data-aos="fade-up" data-aos-delay="250">
+            <i class="ph-fill ph-shield-warning"></i>
+            <div>
+              <h4 class="font-bold text-white">Техник-безопасник</h4>
+              <p>Контроль безопасности</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="budget" class="glass-card" data-aos="fade-up">
+        <h2 class="flex items-center gap-4">
+          <i class="ph-fill ph-coins"></i>6. Инвентарь и бюджет
+        </h2>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left">
+            <thead class="border-b border-slate-600">
+              <tr>
+                <th class="p-3">Категория</th>
+                <th class="p-3">Источник</th>
+                <th class="p-3 text-right">Сумма</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-slate-700/50">
+                <td class="p-3">Декор «Lab»</td>
+                <td class="p-3">Amazon / LabDepot</td>
+                <td class="p-3 text-right">180 $</td>
+              </tr>
+              <tr class="border-b border-slate-700/50">
+                <td class="p-3">Lab-Glassware бар</td>
+                <td class="p-3">Amazon, Party City</td>
+                <td class="p-3 text-right">120 $</td>
+              </tr>
+              <tr class="border-b border-slate-700/50">
+                <td class="p-3">Хим. реактивы</td>
+                <td class="p-3">Loblaws, Canadian Tire</td>
+                <td class="p-3 text-right">100 $</td>
+              </tr>
+              <tr class="border-b border-slate-700/50">
+                <td class="p-3">3D-станция</td>
+                <td class="p-3">Одолжить / Аренда</td>
+                <td class="p-3 text-right">~300 $</td>
+              </tr>
+              <tr class="border-b border-slate-700/50">
+                <td class="p-3">Прочее оборуд.</td>
+                <td class="p-3">Amazon / Аренда</td>
+                <td class="p-3 text-right">~520 $</td>
+              </tr>
+              <tr class="border-b border-slate-700/50">
+                <td class="p-3">SOP-пермит</td>
+                <td class="p-3">AGCO</td>
+                <td class="p-3 text-right">75 $</td>
+              </tr>
+              <tr class="border-b-2 border-slate-500 font-bold">
+                <td class="p-3">Итого инвентарь:</td>
+                <td class="p-3"></td>
+                <td class="p-3 text-right">≈ 1295 $</td>
+              </tr>
+              <tr class="font-bold">
+                <td class="p-3">Аренда площадки:</td>
+                <td></td>
+                <td class="p-3 text-right">700 $</td>
+              </tr>
+              <tr class="text-xl font-extrabold text-white bg-slate-800/50">
+                <td class="p-3 rounded-l-lg">Grand Total:</td>
+                <td></td>
+                <td class="p-3 text-right rounded-r-lg">≈ 1995 $ + HST</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="guests" class="glass-card" data-aos="fade-up">
+        <h2 class="flex items-center gap-4">
+          <i class="ph-fill ph-envelope"></i>7. Подготовка гостей
+        </h2>
+        <div class="space-y-6">
+          <div data-aos="fade-right">
+            <h3 class="text-xl text-indigo-300">T-5 нед: Save-the-date</h3>
+            <p>
+              Электронное приглашение в стиле научного протокола с запросом на
+              активное участие и дресс-кодом.
+            </p>
+          </div>
+          <div data-aos="fade-right" data-aos-delay="100">
+            <h3 class="text-xl text-indigo-300">T-7 дн: Dress-code & safety</h3>
+            <p>
+              Напоминание про удобную одежду, обувь без каблуков и меры
+              предосторожности.
+            </p>
+          </div>
+          <div data-aos="fade-right" data-aos-delay="200">
+            <h3 class="text-xl text-indigo-300">T-1 день: WhatsApp ping</h3>
+            <p>
+              Точный адрес, схема проезда и напоминание про ID 19+ и хорошее
+              настроение.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="checklists" class="glass-card" data-aos="fade-up">
+        <h2 class="flex items-center gap-4">
+          <i class="ph-fill ph-check-square-offset"></i>8. Чек-листы
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div data-aos="fade-right">
+            <h3 class="text-2xl">Долгосрочный</h3>
+            <ul class="space-y-2 mt-4 list-disc list-inside">
+              <li><strong>T-8 нед:</strong> Бронь площадки.</li>
+              <li><strong>T-6 нед:</strong> Заказ реквизита.</li>
+              <li>
+                <strong>T-4 нед:</strong> Закупка приборов, продумывание декора.
+              </li>
+              <li>
+                <strong>T-3 нед:</strong> Подача на SOP-пермит, отправка
+                приглашений.
+              </li>
+              <li>
+                <strong>T-2 нед:</strong> Закупка напитков, заказ кейтеринга.
+              </li>
+              <li><strong>T-1 нед:</strong> Генеральный тест оборудования.</li>
+              <li><strong>T-1 день:</strong> Сбор «тревожного чемоданчика».</li>
+            </ul>
+          </div>
+          <div data-aos="fade-left">
+            <h3 class="text-2xl">День мероприятия</h3>
+            <ul class="space-y-2 mt-4 list-disc list-inside">
+              <li><strong>15:00:</strong> Прибытие на площадку.</li>
+              <li><strong>15:00–17:00:</strong> Setup и декор.</li>
+              <li><strong>17:00:</strong> Sound & Safety check.</li>
+              <li><strong>17:45:</strong> Финальные штрихи, welcome-drinks.</li>
+              <li><strong>18:00:</strong> Прибытие гостей.</li>
+              <li><strong>22:30:</strong> Окончание, начало уборки.</li>
+              <li><strong>23:00:</strong> Сдача помещения.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="risks" class="glass-card" data-aos="fade-up">
+        <h2 class="flex items-center gap-4">
+          <i class="ph-fill ph-warning"></i>9. Потенциальные риски и решения
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div data-aos="zoom-in">
+            <h4 class="font-bold text-white">Химический ожог / аллергия</h4>
+            <p class="text-slate-400">
+              План Б: Использовать только пищевые/бытовые реактивы, иметь под
+              рукой нейтрализаторы и аптечку.
+            </p>
+          </div>
+          <div data-aos="zoom-in" data-aos-delay="100">
+            <h4 class="font-bold text-white">Травма в VR-зоне</h4>
+            <p class="text-slate-400">
+              План Б: Ограничить зону лентой, постелить мат, постоянный контроль
+              фасилитатора.
+            </p>
+          </div>
+          <div data-aos="zoom-in" data-aos-delay="200">
+            <h4 class="font-bold text-white">Пожар / дым</h4>
+            <p class="text-slate-400">
+              План Б: Использовать только безопасное оборудование (мини-Tesla),
+              иметь огнетушитель CO₂.
+            </p>
+          </div>
+          <div data-aos="zoom-in" data-aos-delay="300">
+            <h4 class="font-bold text-white">Гости теряют интерес</h4>
+            <p class="text-slate-400">
+              План Б: Частая смена активностей, вовлекающие вопросы от
+              фасилитаторов, фоновые гаджеты.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="kpi" class="glass-card" data-aos="fade-up">
+        <h2 class="flex items-center gap-4">
+          <i class="ph-fill ph-chart-line-up"></i>10. KPI успеха
+        </h2>
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+          <div data-aos="flip-up">
+            <p class="text-4xl font-bold text-indigo-400">≥25</p>
+            <p>Гостей остались >3ч</p>
+          </div>
+          <div data-aos="flip-up" data-aos-delay="100">
+            <p class="text-4xl font-bold text-indigo-400">70%</p>
+            <p>Участвовали в активностях</p>
+          </div>
+          <div data-aos="flip-up" data-aos-delay="200">
+            <p class="text-4xl font-bold text-indigo-400">80%</p>
+            <p>Унесли сувенир</p>
+          </div>
+          <div data-aos="flip-up" data-aos-delay="300">
+            <p class="text-4xl font-bold text-indigo-400">0</p>
+            <p>Травм и поломок</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="ideas" class="glass-card" data-aos="fade-up">
+        <h2 class="flex items-center gap-4">
+          <i class="ph-fill ph-lightbulb"></i>11. Дополнительные идеи и фишки
+        </h2>
+        <ul class="space-y-4 list-disc list-inside">
+          <li>
+            <strong>«Laser Maze» коридор:</strong> Лабиринт из красных нитей при
+            входе.
+          </li>
+          <li>
+            <strong>AR-рисование гостя:</strong> «Оживающие» рисунки через
+            приложение на планшете.
+          </li>
+          <li>
+            <strong>«Живая фотозона»-голограмма:</strong> 3D-голограммы с
+            помощью пирамидки для смартфона.
+          </li>
+          <li>
+            <strong>Музыкальная Tesla:</strong> Синхронизация катушки Тесла с
+            мелодией для мини-шоу.
+          </li>
+          <li>
+            <strong>Элементы косплея:</strong> Предложить гостям прийти в
+            образах ученых.
+          </li>
+        </ul>
+      </section>
+
+      <section id="post-event" class="glass-card" data-aos="fade-up">
+        <h2 class="flex items-center gap-4">
+          <i class="ph-fill ph-rocket-launch"></i>12. Post-event
+        </h2>
+        <ul class="space-y-4 list-disc list-inside">
+          <li>Разослать благодарность, фото и видео на следующее утро.</li>
+          <li>
+            Собрать обратную связь через 2-3 дня с помощью короткой анкеты.
+          </li>
+          <li>Вернуть арендованное оборудование.</li>
+          <li>Организовать пост-пати для команды организаторов.</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="text-center py-8 text-slate-500">
+      <p>Удачной подготовки! 🔬🎉</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800,
+        once: true,
+        offset: 50,
+      });
+    </script>
+  </body>
+</html>
